@@ -4,7 +4,7 @@ CC=	cl.exe
 CFLAGS=	/c
 
 LINK=	link.exe
-LIBS=	
+LIBS=	user32.lib
 LFLAGS=
 
 EXIST=	cmd.exe /C if exist
