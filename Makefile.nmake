@@ -28,7 +28,7 @@ clean:
 	$(EXIST) $(CMD).exe del $(CMD).exe
 	dir
 
-curruption-run:
+corruption-run:
 	$(CC) /c $*.c
 	$(LINK) $(LFLAGS) $(LIBS) *.obj
 	$(CMD).exe
