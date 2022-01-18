@@ -29,6 +29,6 @@ clean:
 	dir
 
 corruption-run:
-	$(CC) /c $*.c
+	$(CC) /c $(CMD).c
 	$(LINK) $(LFLAGS) $(LIBS) *.obj
 	$(CMD).exe
