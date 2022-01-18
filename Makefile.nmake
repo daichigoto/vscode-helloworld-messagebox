@@ -1,7 +1,7 @@
 CMD=	helloworld
 
 CC=	cl.exe
-CFLAGS=	/c
+CFLAGS=	/c /source-charset:utf-8
 
 LINK=	link.exe
 LIBS=	user32.lib
