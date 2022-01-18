@@ -1,5 +1,3 @@
-#define UNICODE
-
 /*
  * Reference:
  *    https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-winmain
@@ -8,5 +6,5 @@
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
-  return MessageBox(NULL, L"新大陸へようこそ!", L"はじめてのウィンドウプログラミング", 0);
+  return MessageBox(NULL, "新大陸へようこそ!", "はじめてのウィンドウプログラミング", 0);
 }
