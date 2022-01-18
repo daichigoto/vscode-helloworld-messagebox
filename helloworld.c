@@ -1,8 +1,6 @@
-/*
 #ifndef UNICODE
 #define UNICODE
 #endif 
-*/
 
 /*
  * Reference:
