@@ -1,6 +1,6 @@
-#ifndef UNICODE
-#define UNICODE
-#endif 
+/* #ifndef UNICODE */
+/* #define UNICODE */
+/* #endif */ 
 
 /*
  * Reference:
@@ -10,5 +10,5 @@
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
-  return MessageBox(NULL, L"新大陸へようこそ!", L"はじめてのウィンドウプログラミング", MB_OK);
+  return MessageBox(NULL, TEXT("新大陸へようこそ!"), TEXT("はじめてのウィンドウプログラミング"), MB_OK);
 }
