@@ -3,40 +3,42 @@
  *    https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-winmain
  */
 #include <windows.h>
-#include <stdio.h>
 
 void
 check_ret(int retCode)
 {
+  LPCTSTR lpText;
   switch(retCode) {
     case IDOK:
-      printf("「OK」ボタンが押されました。\n");
+      lpText = "「OK」ボタンが押されました。";
       break;
     case IDCANCEL:
-      printf("「Cancel」ボタンが押されました。\n");
+      lpText = "「Cancel」ボタンが押されました。";
       break;
     case IDABORT:
-      printf("「Abort」ボタンが押されました。\n");
+      lpText = "「Abort」ボタンが押されました。";
       break;
     case IDRETRY:
-      printf("「Retry」ボタンが押されました。\n");
+      lpText = "「Retry」ボタンが押されました。";
       break;
     case IDIGNORE:
-      printf("「Ignore」ボタンが押されました。\n");
+      lpText = "「Ignore」ボタンが押されました。";
       break;
     case IDYES:
-      printf("「Yes」ボタンが押されました。\n");
+      lpText = "「Yes」ボタンが押されました。";
       break;
     case IDNO:
-      printf("「No」ボタンが押されました。\n");
+      lpText = "「No」ボタンが押されました。";
       break;
     case IDTRYAGAIN:
-      printf("「Try Again」ボタンが押されました。\n");
+      lpText = "「Try Again」ボタンが押されました。";
       break;
     case IDCONTINUE:
-      printf("「Continue」ボタンが押されました。\n");
+      lpText = "「Continue」ボタンが押されました。";
       break;
   }
+
+  MessageBox(NULL, lpText, "押されたボタン", MB_OK);
 }
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
