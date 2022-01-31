@@ -13,28 +13,28 @@ check_ret(int retCode)
       lpText = "「OK」ボタンが押されました。";
       break;
     case IDCANCEL:
-      lpText = "「Cancel」ボタンが押されました。";
+      lpText = "「キャンセル」ボタンが押されました。";
       break;
     case IDABORT:
-      lpText = "「Abort」ボタンが押されました。";
+      lpText = "「中止」ボタンが押されました。";
       break;
     case IDRETRY:
-      lpText = "「Retry」ボタンが押されました。";
+      lpText = "「再試行」ボタンが押されました。";
       break;
     case IDIGNORE:
-      lpText = "「Ignore」ボタンが押されました。";
+      lpText = "「無視」ボタンが押されました。";
       break;
     case IDYES:
-      lpText = "「Yes」ボタンが押されました。";
+      lpText = "「はい」ボタンが押されました。";
       break;
     case IDNO:
-      lpText = "「No」ボタンが押されました。";
+      lpText = "「いいえ」ボタンが押されました。";
       break;
     case IDTRYAGAIN:
-      lpText = "「Try Again」ボタンが押されました。";
+      lpText = "「再実行」ボタンが押されました。";
       break;
     case IDCONTINUE:
-      lpText = "「Continue」ボタンが押されました。";
+      lpText = "「続行」ボタンが押されました。";
       break;
   }
 
@@ -45,32 +45,51 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 {
   LPCTSTR lpText = "新大陸へようこそ!";
   LPCTSTR lpCaption = "はじめてのウィンドウプログラミング";
-
   int ret;
 
+  // 「OK」
   ret = MessageBox(NULL, lpText, lpCaption, MB_OK);
   check_ret(ret);
 
+  // 「OK」「キャンセル」
   ret = MessageBox(NULL, lpText, lpCaption, MB_OKCANCEL);
   check_ret(ret);
 
+  // 「中止」「再試行」「無視」
   ret = MessageBox(NULL, lpText, lpCaption, MB_ABORTRETRYIGNORE);
   check_ret(ret);
 
+  // 「はい」「いいえ」「キャンセル」
   ret = MessageBox(NULL, lpText, lpCaption, MB_YESNOCANCEL);
   check_ret(ret);
 
+  // 「はい」「いいえ」
   ret = MessageBox(NULL, lpText, lpCaption, MB_YESNO);
   check_ret(ret);
 
+  // 「再試行」「キャンセル」
   ret = MessageBox(NULL, lpText, lpCaption, MB_RETRYCANCEL);
   check_ret(ret);
 
+  // 「キャンセル」「再実行」「続行」
   ret = MessageBox(NULL, lpText, lpCaption, MB_CANCELTRYCONTINUE);
   check_ret(ret);
 
+  // 「OK」「ヘルプ」
   ret = MessageBox(NULL, lpText, lpCaption, MB_HELP);
   check_ret(ret);
+
+  // 注意アイコン
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OK | MB_ICONWARNING);
+
+  // 情報アイコン
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OK | MB_ICONINFORMATION);
+
+  // エラーアイコン
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OK | MB_ICONERROR);
+
+  // クエスチョンアイコン
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OK | MB_ICONQUESTION);
 
   return 0;
 }
