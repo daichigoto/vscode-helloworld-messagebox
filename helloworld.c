@@ -43,9 +43,33 @@ check_ret(int retCode)
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
+  LPCTSTR lpText = "新大陸へようこそ!";
+  LPCTSTR lpCaption = "はじめてのウィンドウプログラミング";
+
   int ret;
 
-  ret = MessageBox(NULL, "新大陸へようこそ!", "はじめてのウィンドウプログラミング", 0);
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OK);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_OKCANCEL);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_ABORTRETRYIGNORE);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_YESNOCANCEL);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_YESNO);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_RETRYCANCEL);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_CANCELTRYCONTINUE);
+  check_ret(ret);
+
+  ret = MessageBox(NULL, lpText, lpCaption, MB_HELP);
   check_ret(ret);
 
   return 0;
